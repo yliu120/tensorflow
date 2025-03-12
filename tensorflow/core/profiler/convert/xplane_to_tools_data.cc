@@ -387,9 +387,11 @@ absl::StatusOr<std::string> ConvertMultiXSpacesToToolData(
     return ConvertMultiXSpacesToOverviewPage(session_snapshot);
   } else if (tool_name == "input_pipeline_analyzer") {
     return ConvertMultiXSpacesToInputPipeline(session_snapshot);
-  } else if (tool_name == "framework_op_stats") {
-    return ConvertMultiXSpacesToTfStats(session_snapshot);
-  } else if (tool_name == "kernel_stats") {
+  } 
+  // else if (tool_name == "framework_op_stats") {
+  //   return ConvertMultiXSpacesToTfStats(session_snapshot);
+  // } 
+    else if (tool_name == "kernel_stats") {
     return ConvertMultiXSpacesToKernelStats(session_snapshot);
   } else if (tool_name == "memory_profile") {
     return ConvertXSpaceToMemoryProfile(session_snapshot);
